@@ -167,7 +167,8 @@ public class FlutterFlingPlugin implements MethodCallHandler {
         void startDiscoveryController() {
 //            stopDiscoveryController();
             mPlayers = new HashSet<>();
-
+            // here you can put a custom Media Reciever sid in if you have one instead of the amazon tv/firestick generic
+            // if time later, pull request an actual implementation of this back in.
             this.mController.start("amzn.thin.pl", new DiscoveryController.IDiscoveryListener() {
                 @Override
                 public void playerDiscovered(RemoteMediaPlayer player) {
